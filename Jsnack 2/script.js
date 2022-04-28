@@ -5,8 +5,13 @@
   - Infine stampa separatamente quanto pesano i due gruppi di zucchine.
 
 */
-const shortZucchine = [];
 const longZucchine = [];
+const shortZucchine = [];
+
+const longPesoZucchine = [];
+const shortPesoZucchine = [];
+sommalongZucchine = 0;
+sommashortZucchine = 0;
 
 const zucchine = [
 
@@ -73,21 +78,38 @@ const zucchine = [
 
 for(let [i] in zucchine){
   const tipiDiZucchine = zucchine[i];
+
   console.log("Varietà: " + tipiDiZucchine.varietà);
   console.log("Peso: " + tipiDiZucchine.peso + " grammi");
   console.log("Lunghezza: " + tipiDiZucchine.lunghezza + " centrimetri");
-  console.log("------------------------------------------");
+  console.log("------------------------------------------"); 
 
-  // Dividi in due array separati le zucchine che misurano meno o più di 15cm
+  // Divido in due array gli elementi sopra i 15cm e quelli sotto e gli pusho
   zucchine[i] = ( tipiDiZucchine.lunghezza >= 15 ) ? longZucchine.push( tipiDiZucchine.varietà ) : shortZucchine.push( tipiDiZucchine.varietà );
   
-  // Stampa separatamente quanto pesano i due gruppi di zucchine
-  sommalongZucchine = somma += parseInt();
+  // Faccio la stessa cosa ma creo un array a parte elencando i pesi dei miei elementi tra il primo array e il secondo
+  zucchine[i] = ( tipiDiZucchine.lunghezza >= 15 ) ? longPesoZucchine.push( tipiDiZucchine.peso ) : shortPesoZucchine.push( tipiDiZucchine.peso );
 }
 
-console.log("Zucchina Lunga: " + longZucchine);
+// Creo la funzione per sommarmi il peso degli elementi dentro i miei due array
+function getSum(total, longPesoZucchine) {
+  return total + Math.round(longPesoZucchine);
+}
+
+function getSum(total, shortPesoZucchine) {
+  return total + Math.round(shortPesoZucchine);
+}
+
+// Stampo i miei risultati
+
+// Stampo la lista delle zucchine dai 15cm in su
 document.getElementById( "zucchina-lunga" ).innerHTML = "Lista delle Zucchine che sono dai 15 centrimetri in su: " + longZucchine;
 
-console.log( "Zucchina Corta: " + shortZucchine );
 document.getElementById( "zucchina-corta" ).innerHTML = "Lista delle Zucchine che sono dai 14 centrimetri in giù: " + shortZucchine;
 
+
+// Stampo la lista del peso totale delle zucchine lunghe
+document.getElementById("zucchina-peso-lunga").innerHTML = "Il peso totale del gruppo delle Zucchine lunghe è: " + longPesoZucchine.reduce(getSum, 0) + " grammi";
+
+// Stampo la lista del peso totale delle zucchine corte
+document.getElementById("zucchina-peso-corto").innerHTML = "Il peso totale del gruppo delle Zucchine corte è: " + shortPesoZucchine.reduce(getSum, 0) + " grammi";

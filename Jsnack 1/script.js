@@ -11,61 +11,61 @@ const zucchine = [
   {
     varietà: "Striata d’Italia",
     peso: "200",
-    lunghezza: "1",
+    lunghezza: "10",
   },
 
   {
     varietà: "Nera di Milano",
     peso: "180",
-    lunghezza: "0,9",
+    lunghezza: "9",
   },
 
   {
     varietà: "Fiorentina",
     peso: "150",
-    lunghezza: "1,4",
+    lunghezza: "14",
   },
 
   {
     varietà: "Zucchino siciliano",
     peso: "100",
-    lunghezza: "2,1",
+    lunghezza: "21",
   },
 
   {
     varietà: "Striata di Napoli",
     peso: "250",
-    lunghezza: "1,9",
+    lunghezza: "19",
   },
 
   {
     varietà: "Zucchina bianca triestina",
     peso: "190",
-    lunghezza: "1",
+    lunghezza: "10",
   },
 
   {
     varietà: "Sechio o zucchina centenaria",
     peso: "110",
-    lunghezza: "0,8",
+    lunghezza: "8",
   },
 
   {
     varietà: "Tonda di Nizza",
     peso: "110",
-    lunghezza: "1,5",
+    lunghezza: "15",
   },
 
   {
     varietà: "Tonda di Piacenza",
     peso: "140",
-    lunghezza: "2",
+    lunghezza: "20",
   },
 
   {
     varietà: "Zucchina genovese",
     peso: "210",
-    lunghezza: "1",
+    lunghezza: "10",
   }
 ];
 

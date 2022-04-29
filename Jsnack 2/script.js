@@ -85,10 +85,14 @@ for(let [i] in zucchine){
   console.log("------------------------------------------"); 
 
   // Divido in due array gli elementi sopra i 15cm e quelli sotto e gli pusho
-  zucchine[i] = ( tipiDiZucchine.lunghezza >= 15 ) ? longZucchine.push( tipiDiZucchine.varietà ) : shortZucchine.push( tipiDiZucchine.varietà );
+
+  // Non serve mettere zucchine[i] perchè va anche senza me lo prende comunque
+  /* zucchine[i] = ( tipiDiZucchine.lunghezza >= 15 ) ? longZucchine.push( tipiDiZucchine.varietà ) : shortZucchine.push( tipiDiZucchine.varietà ); */
+
+  ( tipiDiZucchine.lunghezza >= 15 ) ? longZucchine.push( tipiDiZucchine.varietà ) : shortZucchine.push( tipiDiZucchine.varietà );
   
   // Faccio la stessa cosa ma creo un array a parte elencando i pesi dei miei elementi tra il primo array e il secondo
-  zucchine[i] = ( tipiDiZucchine.lunghezza >= 15 ) ? longPesoZucchine.push( tipiDiZucchine.peso ) : shortPesoZucchine.push( tipiDiZucchine.peso );
+  ( tipiDiZucchine.lunghezza >= 15 ) ? longPesoZucchine.push( tipiDiZucchine.peso ) : shortPesoZucchine.push( tipiDiZucchine.peso );
 }
 
 // Creo la funzione per sommarmi il peso degli elementi dentro i miei due array
